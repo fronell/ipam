@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ip: MyString
+  class_c: MyString
+  occupado: false
+
+two:
+  ip: MyString
+  class_c: MyString
+  occupado: false
