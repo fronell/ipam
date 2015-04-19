@@ -2,6 +2,10 @@ class IpsController < ApplicationController
   before_action :set_ip, only: [:show, :edit, :update, :destroy]
   protect_from_forgery with: :null_session
 
+  def gimme_ips
+    @ips = Ip.gimme_ips
+  end
+
   # GET /ips
   # GET /ips.json
   def index

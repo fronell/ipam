@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ips</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ip</th>
+      <th>Class c</th>
+      <th>Occupado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ips.each do |ip| %>
+      <tr>
+        <td><%= ip.ip %></td>
+        <td><%= ip.class_c %></td>
+        <td><%= ip.occupado %></td>
+        <td><%= link_to 'Show', ip %></td>
+        <td><%= link_to 'Edit', edit_ip_path(ip) %></td>
+        <td><%= link_to 'Destroy', ip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ip', new_ip_path %>
