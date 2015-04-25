@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cidr_address: MyString
+  name: MyString
+  vlan: MyString
+  location: MyString
+  domain: MyString
+  private: false
+
+two:
+  cidr_address: MyString
+  name: MyString
+  vlan: MyString
+  location: MyString
+  domain: MyString
+  private: false

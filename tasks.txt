@@ -1,15 +1,23 @@
--Investigate if gimme_ips can work under the ips/gimme_ips
---Doesn't look like it since it automatically takes anything after ips/ and 
-  searches it using the id i.e. id=gimme_ips.  Follow up with Jared/rick on this
-  one
 -gimme_ips
 --Add support to how many IP's can be requested in gimme_ips
 --When looking up free ip's, do a ping/rdp/ssh test to confirm they are available
 -Create networks model
 --Create one-to-many relationship of networks to ip's
---Automatically create ip's based on networks added
+---Read chapter 8 (Arranging Notes Category Wise) of Rails 4 Application Development HOTSHOT
+-*Automatically create ip's based on networks added
 --Support for network in gimme_ips
+--Return all ip's in a network with all their attributes in csv/tab format
+--Implement callback before_save to ensure correct format of data like 
+  uppercase, lowercase, titlecase, chapter 6
 --Add validation
+---Read chapter 6 of Ruby on Rails Tutorial
+--Create indexes
+---Read chapter 6, rails generate migration add_index_to_users_email
+-IP Model
+--Create indexes
+---Read chapter 6, rails generate migration add_index_to_users_email
+--Implement callback before_save to ensure correct format of data like 
+  uppercase, lowercase, titlecase, chapter 6
 -Testing
 --Create script that will populate with networks/ip's for testing
 -Update IP's
@@ -17,5 +25,10 @@
 --Implement actions to set attributes for a whole subnet of IP's with one command
   i.e. automatically set all IP's for a network as PCI in-scope
 --Validation
+-Look into automating REST API documentation
+-Unit testing
 -Setup authentication for API
+--Read chapter 8 of Rails 4 Application Development HOTSHOT
 -Play around with gui/bootstrap templates
+-Security
+--Read chapter 8 of Rails 4 Application Development HOTSHOT

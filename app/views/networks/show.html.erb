@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cidr address:</strong>
+  <%= @network.cidr_address %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @network.name %>
+</p>
+
+<p>
+  <strong>Vlan:</strong>
+  <%= @network.vlan %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @network.location %>
+</p>
+
+<p>
+  <strong>Domain:</strong>
+  <%= @network.domain %>
+</p>
+
+<p>
+  <strong>Private:</strong>
+  <%= @network.private %>
+</p>
+
+<%= link_to 'Edit', edit_network_path(@network) %> |
+<%= link_to 'Back', networks_path %>

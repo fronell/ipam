@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
+  resources :networks
+  # Routes are in order or precedence.  By having this route above resources :ips
+  # It won't try to pass 'gimme_ips' as the :id to the show action
+  get 'ips/gimme_ips', to: 'ips#gimme_ips'
+  # Map REST CRUD actions to IPs controller
   resources :ips
+  # You can also specify multiple resources on the same line i.e.
+  #resources :ips, :networks
 
-  get 'gimme_ips' => 'ips#gimme_ips'
+  # Keep this for future reference but will probably delete later on
+  #get 'gimme_ips' => 'ips#gimme_ips'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

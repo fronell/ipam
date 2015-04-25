@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150418004022) do
+ActiveRecord::Schema.define(version: 20150425220824) do
 
   create_table "ips", force: :cascade do |t|
     t.string   "ip"
@@ -19,6 +19,18 @@ ActiveRecord::Schema.define(version: 20150418004022) do
     t.boolean  "occupado"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "network_id"
+  end
+
+  create_table "networks", force: :cascade do |t|
+    t.string   "cidr_address"
+    t.string   "name"
+    t.string   "vlan"
+    t.string   "location"
+    t.string   "domain"
+    t.boolean  "private"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end

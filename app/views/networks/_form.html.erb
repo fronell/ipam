@@ -1,0 +1,41 @@
+<%= form_for(@network) do |f| %>
+  <% if @network.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@network.errors.count, "error") %> prohibited this network from being saved:</h2>
+
+      <ul>
+      <% @network.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cidr_address %><br>
+    <%= f.text_field :cidr_address %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :vlan %><br>
+    <%= f.text_field :vlan %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :domain %><br>
+    <%= f.text_field :domain %>
+  </div>
+  <div class="field">
+    <%= f.label :private %><br>
+    <%= f.check_box :private %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

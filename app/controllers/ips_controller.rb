@@ -2,6 +2,8 @@ class IpsController < ApplicationController
   before_action :set_ip, only: [:show, :edit, :update, :destroy]
   protect_from_forgery with: :null_session
 
+  # GET /ips/gimme_ips
+  # GET /ips/gimme_ips.json
   def gimme_ips
     @ips = Ip.gimme_ips
   end
