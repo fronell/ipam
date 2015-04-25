@@ -1,0 +1,21 @@
+-Investigate if gimme_ips can work under the ips/gimme_ips
+--Doesn't look like it since it automatically takes anything after ips/ and 
+  searches it using the id i.e. id=gimme_ips.  Follow up with Jared/rick on this
+  one
+-gimme_ips
+--Add support to how many IP's can be requested in gimme_ips
+--When looking up free ip's, do a ping/rdp/ssh test to confirm they are available
+-Create networks model
+--Create one-to-many relationship of networks to ip's
+--Automatically create ip's based on networks added
+--Support for network in gimme_ips
+--Add validation
+-Testing
+--Create script that will populate with networks/ip's for testing
+-Update IP's
+--Look into updating IP's in batches
+--Implement actions to set attributes for a whole subnet of IP's with one command
+  i.e. automatically set all IP's for a network as PCI in-scope
+--Validation
+-Setup authentication for API
+-Play around with gui/bootstrap templates
