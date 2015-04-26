@@ -14,13 +14,13 @@ net  = {
   cidr_address: '192.168.1.0/24'
 }
 
-def create_net
-  response = RestClient.post("#{host}/networks",
-                             net.to_json,    # Encode the entire body as JSON
-                             {
-                               :content_type => 'application/json',
-                               :accept => 'application/json'
-                             })
+def create_net(host, net)
+  RestClient.post("#{host}/networks",
+                  net.to_json,    # Encode the entire body as JSON
+                  {
+                    :content_type => 'application/json',
+                    :accept => 'application/json'
+                  })
 end
 
 def create_ips(host, net)
@@ -44,5 +44,5 @@ def create_ips(host, net)
   end
 end
 
-#create_net
+create_net(host, net)
 create_ips(host, net)
