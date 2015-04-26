@@ -1,0 +1,6 @@
+# Generate Network model
+rails g scaffold Network cidr_address:string 
+# Generate IP model
+rails g scaffold Ip ip:string occupado:boolean network:references
+# Commit to DB
+rake db:migrate

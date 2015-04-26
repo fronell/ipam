@@ -2,9 +2,9 @@
 --Add support to how many IP's can be requested in gimme_ips
 --When looking up free ip's, do a ping/rdp/ssh test to confirm they are available
 -Create networks model
---Create one-to-many relationship of networks to ip's
+-*Create one-to-many relationship of networks to ip's
 ---Read chapter 8 (Arranging Notes Category Wise) of Rails 4 Application Development HOTSHOT
--*Automatically create ip's based on networks added
+--Automatically create ip's based on networks added
 --Support for network in gimme_ips
 --Return all ip's in a network with all their attributes in csv/tab format
 --Implement callback before_save to ensure correct format of data like 
