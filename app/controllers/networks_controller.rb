@@ -70,6 +70,6 @@ class NetworksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def network_params
-      params.require(:network).permit(:cidr_address, :name, :vlan, :location, :domain, :private)
+      params.require(:network).permit(:cidr_address)
     end
 end

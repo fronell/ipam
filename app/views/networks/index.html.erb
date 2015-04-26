@@ -6,11 +6,7 @@
   <thead>
     <tr>
       <th>Cidr address</th>
-      <th>Name</th>
-      <th>Vlan</th>
-      <th>Location</th>
-      <th>Domain</th>
-      <th>Private</th>
+      <th>Network Id</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,11 +15,7 @@
     <% @networks.each do |network| %>
       <tr>
         <td><%= network.cidr_address %></td>
-        <td><%= network.name %></td>
-        <td><%= network.vlan %></td>
-        <td><%= network.location %></td>
-        <td><%= network.domain %></td>
-        <td><%= network.private %></td>
+        <td><%= network.network_id %></td>
         <td><%= link_to 'Show', network %></td>
         <td><%= link_to 'Edit', edit_network_path(network) %></td>
         <td><%= link_to 'Destroy', network, method: :delete, data: { confirm: 'Are you sure?' } %></td>

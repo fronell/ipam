@@ -11,24 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150425220824) do
+ActiveRecord::Schema.define(version: 20150426195149) do
 
   create_table "ips", force: :cascade do |t|
     t.string   "ip"
-    t.string   "class_c"
     t.boolean  "occupado"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "network_id"
   end
 
+  add_index "ips", ["network_id"], name: "index_ips_on_network_id"
+
   create_table "networks", force: :cascade do |t|
     t.string   "cidr_address"
-    t.string   "name"
-    t.string   "vlan"
-    t.string   "location"
-    t.string   "domain"
-    t.boolean  "private"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

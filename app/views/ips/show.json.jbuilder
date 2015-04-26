@@ -1,1 +1,1 @@
-json.extract! @ip, :id, :ip, :class_c, :occupado, :created_at, :updated_at
+json.extract! @ip, :id, :ip, :occupado, :created_at, :updated_at
