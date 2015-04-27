@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Cidr address</th>
       <th>Network Id</th>
+      <th>Cidr address</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +14,8 @@
   <tbody>
     <% @networks.each do |network| %>
       <tr>
+        <td><%= network.id %></td>
         <td><%= network.cidr_address %></td>
-        <td><%= network.network_id %></td>
         <td><%= link_to 'Show', network %></td>
         <td><%= link_to 'Edit', edit_network_path(network) %></td>
         <td><%= link_to 'Destroy', network, method: :delete, data: { confirm: 'Are you sure?' } %></td>
