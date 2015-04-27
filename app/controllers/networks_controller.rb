@@ -2,6 +2,13 @@ class NetworksController < ApplicationController
   before_action :set_network, only: [:show, :edit, :update, :destroy]
   protect_from_forgery with: :null_session
 
+  # GET /networks/gimme_ips
+  # GET /networks/gimme_ips.json
+  def gimme_ips
+    net = set_network_by_cidr_address
+    @ips = net.gimme_ips(params[:amount])
+  end
+
   # GET /networks
   # GET /networks.json
   def index
@@ -66,6 +73,11 @@ class NetworksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_network
       @network = Network.find(params[:id])
+    end
+
+    def set_network_by_cidr_address
+      network_id = Network.find_by(cidr_address: params[:cidr_address])[:id]
+      @network = Network.find(network_id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
