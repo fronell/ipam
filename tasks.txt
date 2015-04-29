@@ -1,12 +1,7 @@
 -Follow up
---Check if this is really necessary in controller:
-Is the require :ip below why we have to encapsulate json in the model name?
-params.require(:ip).permit(:ip, :occupado, :network_id)
 -gimme_ips
 --When looking up free ip's, do a ping/rdp/ssh test to confirm they are available
 -Create networks model
--*Automatically create ip's based on networks added
---Support for network in gimme_ips
 --Return all ip's in a network with all their attributes in csv/tab format
 --Implement callback before_save to ensure correct format of data like 
   uppercase, lowercase, titlecase, chapter 6
